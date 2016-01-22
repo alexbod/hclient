@@ -216,8 +216,8 @@ int main(int argc, char** argv)
 	        std::vector<TCell> value;
 	        client.get(value, t, row, "entry:foo", attr);
 	        if (value.size()) {
-	            td::cerr << "FATAL: shouldn't get here!" << std::endl;
-	            eturn -1;
+	            std::cerr << "FATAL: shouldn't get here!" << std::endl;
+	            return -1;
 	        }
 	    } catch (const IOError &ioe) {
 	        /* Blank */
